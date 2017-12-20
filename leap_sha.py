@@ -6,18 +6,18 @@ import sha
 import urllib2
 
 
-
+# list of URLs where we find leap-seconds.list
 url_list = [ "https://hpiers.obspm.fr/iers/bul/bulc/ntp/leap-seconds.list",
              "ftp://tycho.usno.navy.mil/pub/ntp/leap-seconds.list",
             "https://www.ietf.org/timezones/data/leap-seconds.list",
              ]
-#leap = 'leap-seconds_ietf.list'
 
 def sha1_calc(leapsecfile):
     # given a leap-seconds.list file, parse it
     # and return both the old and a newly calculated SHA1
     s = sha.new()
     nlines=0
+    old_hash=""
     for line in leapsecfile:
         nlines+=1
         if line.startswith('#$'): # last update time-stamp
@@ -36,7 +36,7 @@ def sha1_calc(leapsecfile):
         elif line.startswith('#h'): # the SHA-1
             line=line.replace('\n','')
             line=line.replace('\t',' ')
-            line=line.split(' ')
+            line=line.split()
             line.pop(0) # remove the "#h"
             old_hash = "".join(line)
             #print "Old hash: ", old_hash
