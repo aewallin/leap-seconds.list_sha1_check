@@ -1,0 +1,18 @@
+https://hpiers.obspm.fr/iers/bul/bulc/ntp/leap-seconds.list
+read  117  lines
+New:  1e2613791c4627c2d0a34c872ece0ae428dfb714
+Old:  1e2613791c4627c2d0a34c872ece0ae428dfb714
+Identical ?  True
+
+ftp://tycho.usno.navy.mil/pub/ntp/leap-seconds.list
+read  220  lines
+New:  3f00425591f969f7252361e527aa6754eb6b7c72
+Old:  3f00425591f969f7252361e527aa6754eb6b7c72
+Identical ?  True
+
+https://www.ietf.org/timezones/data/leap-seconds.list
+read  250  lines
+New:  5101445a69948b5109153e2b2086e3d8d54561a3
+Old:  5101445a69948b519153e2b2086e3d8d54561a3
+Identical ?  False
+
