@@ -47,7 +47,10 @@ leap_seconds = [ (dt.datetime(1972,1,1, tzinfo=pytz.utc), 10),
                  (dt.datetime(2015,7,1, tzinfo=pytz.utc), 36),
                  (dt.datetime(2017,1,1, tzinfo=pytz.utc), 37),
                   ]
+                  
+# This program:
 # #h	5101445a 69948b51 09153e2b 2086e3d8 d54561a3
+# IETF file: (missing "0")
 # #h	5101445a 69948b51  9153e2b 2086e3d8 d54561a3
 
 # when does the file expire?
