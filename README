@@ -16,3 +16,9 @@ New:  5101445a69948b5109153e2b2086e3d8d54561a3
 Old:  5101445a69948b519153e2b2086e3d8d54561a3
 Identical ?  False
 
+https://data.iana.org/time-zones/code/leap-seconds.list
+read  250  lines
+New:  5101445a69948b5109153e2b2086e3d8d54561a3
+Old:  5101445a69948b519153e2b2086e3d8d54561a3
+Identical ?  False
+
