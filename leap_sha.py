@@ -10,6 +10,7 @@ import urllib2
 url_list = [ "https://hpiers.obspm.fr/iers/bul/bulc/ntp/leap-seconds.list",
              "ftp://tycho.usno.navy.mil/pub/ntp/leap-seconds.list",
             "https://www.ietf.org/timezones/data/leap-seconds.list",
+            "https://data.iana.org/time-zones/code/leap-seconds.list"
              ]
 
 def sha1_calc(leapsecfile):
