@@ -62,24 +62,31 @@ if __name__ == "__main__":
     s=sha.new()
     with open("my_leap-seconds.list","w") as f:
         f.write("# generated on %s\n" % dt.datetime.now())
+        f.write("# this program/generator available from:\n")
+        f.write("# https://github.com/aewallin/leap-seconds.list_sha1_check\n")
+        f.write("# \n")
         f.write("# updated %s\n" % update)
         f.write("#$\t%d\n" % ntp_timestamp(update))
+        f.write("# \n")
         f.write("# expires %s\n"%expires)
         f.write("#@\t%d\n" % ntp_timestamp(expires))
+        f.write("# \n")
         s.update(str(ntp_timestamp(update)))
         s.update(str(ntp_timestamp(expires)))
+        f.write("# Leap seconds\n")
         for l in leap_seconds:
             f.write( "%d\t%d\t# %04d-%02d-%02d\n"%( ntp_timestamp( l[0] ), l[1], l[0].year, l[0].month, l[0].day ) )
             s.update(str(ntp_timestamp( l[0] )))
             s.update(str(l[1]))
         sha1 = s.hexdigest()
+        f.write("# \n")
         f.write("# SHA1 hash for this file: \n")
         f.write("#h\t"+sha1[0:8]+" "+
                       sha1[8:16]+" "+
                       sha1[16:24]+" "+
                       sha1[24:32]+" "+
                       sha1[32:40]+"\n"  )
-    print "main"
+        f.write("# end of file.\n")
 
 # test that this generates OK values.
 # from existing leap-seconds.list
