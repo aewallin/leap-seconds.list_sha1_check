@@ -1,6 +1,6 @@
 These are simple python scripts for reading and writing a leap-seconds.list file.
 
-The lea-seconds.list file contains a SHA1 hash computed from the (date, leapsecond) data of the file.
+The leap-seconds.list file contains a SHA1 hash computed from the (date, leapsecond) data of the file.
 
 In the current 'official' implementation used there is a feature (bug?) that groups the 40-character SHA1 into 5 groups of 8 characters, and then omits leading zeros from the SHA1 hash.
 This feature makes some of the examples below report False for the identity of the SHA1 included in the file and a new one computed using the python sha module.
@@ -36,4 +36,4 @@ read  250  lines
 New:  5101445a69948b5109153e2b2086e3d8d54561a3
 Old:  5101445a69948b519153e2b2086e3d8d54561a3
 Identical ?  False
-
+NOTE: grouped hash 5101445a 69948b51 09153e2b 2086e3d8 d54561a3
